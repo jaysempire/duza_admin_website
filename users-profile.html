@@ -5,12 +5,12 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>Users / Profile - NiceAdmin Bootstrap Template</title>
+  <title>Users / Profile - Duza Lions</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
 
   <!-- Favicons -->
-  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/logo (2).png" rel="icon">
   <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
 
   <!-- Google Fonts -->
@@ -45,8 +45,8 @@
 
     <div class="d-flex align-items-center justify-content-between">
       <a href="index.html" class="logo d-flex align-items-center">
-        <img src="assets/img/logo.png" alt="">
-        <span class="d-none d-lg-block">NiceAdmin</span>
+        <img src="assets/img/logo (2).png" alt="">
+        <span class="d-none d-lg-block">DUZA LIONS</span>
       </a>
       <i class="bi bi-list toggle-sidebar-btn"></i>
     </div><!-- End Logo -->
@@ -281,53 +281,6 @@
         </a>
       </li><!-- End Dashboard Nav -->
 
-      <li class="nav-item">
-        <a class="nav-link collapsed" data-bs-target="#forms-nav" data-bs-toggle="collapse" href="#">
-          <i class="bi bi-journal-text"></i><span>Forms</span><i class="bi bi-chevron-down ms-auto"></i>
-        </a>
-        <ul id="forms-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
-          <li>
-            <a href="forms-elements.html">
-              <i class="bi bi-circle"></i><span>Form Elements</span>
-            </a>
-          </li>
-          <li>
-            <a href="forms-layouts.html">
-              <i class="bi bi-circle"></i><span>Form Layouts</span>
-            </a>
-          </li>
-          <li>
-            <a href="forms-editors.html">
-              <i class="bi bi-circle"></i><span>Form Editors</span>
-            </a>
-          </li>
-          <li>
-            <a href="forms-validation.html">
-              <i class="bi bi-circle"></i><span>Form Validation</span>
-            </a>
-          </li>
-        </ul>
-      </li><!-- End Forms Nav -->
-
-      <li class="nav-item">
-        <a class="nav-link collapsed" data-bs-target="#tables-nav" data-bs-toggle="collapse" href="#">
-          <i class="bi bi-layout-text-window-reverse"></i><span>Tables</span><i class="bi bi-chevron-down ms-auto"></i>
-        </a>
-        <ul id="tables-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
-          <li>
-            <a href="tables-general.html">
-              <i class="bi bi-circle"></i><span>General Tables</span>
-            </a>
-          </li>
-          <li>
-            <a href="tables-data.html">
-              <i class="bi bi-circle"></i><span>Data Tables</span>
-            </a>
-          </li>
-        </ul>
-      </li><!-- End Tables Nav -->
-
-
       <li class="nav-heading">Pages</li>
 
       <li class="nav-item">
@@ -338,40 +291,11 @@
       </li><!-- End Profile Page Nav -->
 
       <li class="nav-item">
-        <a class="nav-link collapsed" href="pages-register.html">
-          <i class="bi bi-card-list"></i>
-          <span>Register</span>
-        </a>
-      </li><!-- End Register Page Nav -->
-
-      <li class="nav-item">
         <a class="nav-link collapsed" href="pages-login.html">
           <i class="bi bi-box-arrow-in-right"></i>
           <span>Login</span>
         </a>
       </li><!-- End Login Page Nav -->
-
-      <li class="nav-item">
-        <a class="nav-link collapsed" href="pages-contact.html">
-          <i class="bi bi-envelope"></i>
-          <span>Contact</span>
-        </a>
-      </li><!-- End Contact Page Nav -->
-
-      <li class="nav-item">
-        <a class="nav-link " href="pages-about.html">
-          <i class="bi bi-person-fill"></i>
-          <span>About</span>
-        </a>
-      </li><!-- End About Page Nav -->
-
-      <li class="nav-item">
-        <a class="nav-link collapsed" href="pages-error-404.html">
-          <i class="bi bi-dash-circle"></i>
-          <span>Error 404</span>
-        </a>
-      </li><!-- End Error 404 Page Nav -->
-
 
     </ul>
 
@@ -395,11 +319,116 @@
 
         <div class="col-xl-12">
 
+          <div class="mt-4 mb-4 text-end">
+            <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#addPlayerModal">
+              <i class="bi bi-plus-circle"></i> Add New Player
+            </button>
+          </div>
+          
+          <!-- Modal for Adding a New Player -->
+          <div class="modal fade" id="addPlayerModal" tabindex="-1" aria-labelledby="addPlayerModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="addPlayerModalLabel">Add New Player</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                  <form id="addPlayerForm">
+                    <div class="mb-3">
+                      <label for="playerName" class="form-label">Player Name</label>
+                      <input type="text" class="form-control" id="playerName" placeholder="Enter player's name" required>
+                    </div>
+          
+                    <!-- Row for Date of Birth and Position -->
+                    <div class="row">
+                      <div class="col-md-6 mb-3">
+                        <label for="playerDOB" class="form-label">Date of Birth</label>
+                        <input type="date" class="form-control" id="playerDOB" required>
+                      </div>
+                      <div class="col-md-6 mb-3">
+                        <label for="playerPosition" class="form-label">Position</label>
+                        <select class="form-select" id="playerPosition" required>
+                          <option value="" disabled selected>Select position</option>
+                          <option value="Forward">Forward</option>
+                          <option value="Midfielder">Midfielder</option>
+                          <option value="Defender">Defender</option>
+                          <option value="Goalkeeper">Goalkeeper</option>
+                        </select>
+                      </div>
+                    </div>
+          
+                    <!-- Row for Jersey Number and State of Origin -->
+                    <div class="row">
+                      <div class="col-md-6 mb-3">
+                        <label for="playerJersey" class="form-label">Jersey Number</label>
+                        <input type="number" class="form-control" id="playerJersey" placeholder="Enter jersey number" required>
+                      </div>
+                      <div class="col-md-6 mb-3">
+                        <label for="playerState" class="form-label">State Of Origin</label>
+                        <select class="form-select" id="playerState" required>
+                          <option value="" disabled selected>Select state</option>
+                          <option value="Abia">Abia</option>
+                          <option value="Adamawa">Adamawa</option>
+                          <option value="Akwa Ibom">Akwa Ibom</option>
+                          <option value="Anambra">Anambra</option>
+                          <option value="Bauchi">Bauchi</option>
+                          <option value="Bayelsa">Bayelsa</option>
+                          <option value="Benue">Benue</option>
+                          <option value="Borno">Borno</option>
+                          <option value="Cross River">Cross River</option>
+                          <option value="Delta">Delta</option>
+                          <option value="Ebonyi">Ebonyi</option>
+                          <option value="Edo">Edo</option>
+                          <option value="Ekiti">Ekiti</option>
+                          <option value="Enugu">Enugu</option>
+                          <option value="FCT">Federal Capital Territory</option>
+                          <option value="Gombe">Gombe</option>
+                          <option value="Imo">Imo</option>
+                          <option value="Jigawa">Jigawa</option>
+                          <option value="Kaduna">Kaduna</option>
+                          <option value="Kano">Kano</option>
+                          <option value="Katsina">Katsina</option>
+                          <option value="Kebbi">Kebbi</option>
+                          <option value="Kogi">Kogi</option>
+                          <option value="Kwara">Kwara</option>
+                          <option value="Lagos">Lagos</option>
+                          <option value="Nasarawa">Nasarawa</option>
+                          <option value="Niger">Niger</option>
+                          <option value="Ogun">Ogun</option>
+                          <option value="Ondo">Ondo</option>
+                          <option value="Osun">Osun</option>
+                          <option value="Oyo">Oyo</option>
+                          <option value="Plateau">Plateau</option>
+                          <option value="Rivers">Rivers</option>
+                          <option value="Sokoto">Sokoto</option>
+                          <option value="Taraba">Taraba</option>
+                          <option value="Yobe">Yobe</option>
+                          <option value="Zamfara">Zamfara</option>
+                        </select>
+                      </div>
+                    </div>
+          
+                    <div class="mb-3">
+                      <label for="playerStats" class="form-label">Season Stats</label>
+                      <textarea class="form-control" id="playerStats" rows="3" placeholder="Enter stats (e.g., Season: 2024, Goals: 15, Assists: 10, Matches: 20)" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-success w-100">Add Player</button>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          
+
           <div class="accordion" id="accordionPanelsStayOpenExample">
+            <!-- Abdullazeez Tanko -->
             <div class="accordion-item">
               <h2 class="accordion-header">
-                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true" aria-controls="panelsStayOpen-collapseOne">
-                  <img src="assets/img/profile-img.jpg" alt="Profile" class="rounded-circle img-size img-fluid">Abdullazeez Tanko
+                <button class="accordion-button d-flex align-items-center" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true" aria-controls="panelsStayOpen-collapseOne">
+                  <img src="assets/img/default image.avif" alt="Profile" class="rounded-circle img-size img-fluid me-2">
+                  Abdullazeez Tanko
                 </button>
               </h2>
               <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show">
@@ -411,9 +440,9 @@
                     <li class="list-group-item"><strong>Jersey Number:</strong> 10</li>
                     <li class="list-group-item"><strong>State Of Origin:</strong> Kaduna</li>
                   </ul>
-                  
+          
                   <h5><strong>Performance Statistics</strong></h5>
-                  <table class="table table-bordered">
+                  <table class="table table-bordered mb-3">
                     <thead class="table-dark">
                       <tr>
                         <th>Season</th>
@@ -443,14 +472,27 @@
                       </tr>
                     </tbody>
                   </table>
+          
+                  <!-- Buttons for Edit and Deactivate -->
+                  <div class="d-flex justify-content-end">
+                    <button class="btn btn-success btn-sm rounded-circle me-2" title="Edit Player Profile">
+                      <i class="bi bi-pencil"></i>
+                    </button>
+                    <button class="btn btn-danger btn-sm rounded-circle" title="Deactivate Player">
+                      <i class="bi bi-x"></i>
+                    </button>
+                  </div>
                 </div>
               </div>
             </div>
           
+            <!-- Repeat for other players -->
+            <!-- James Musa -->
             <div class="accordion-item">
               <h2 class="accordion-header">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false" aria-controls="panelsStayOpen-collapseTwo">
-                  <img src="assets/img/profile-img.jpg" alt="Profile" class="rounded-circle img-size img-fluid">James Musa
+                <button class="accordion-button d-flex align-items-center collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false" aria-controls="panelsStayOpen-collapseTwo">
+                  <img src="assets/img/default image.avif" alt="Profile" class="rounded-circle img-size img-fluid me-2">
+                  James Musa
                 </button>
               </h2>
               <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse">
@@ -464,7 +506,7 @@
                   </ul>
           
                   <h5><strong>Performance Statistics</strong></h5>
-                  <table class="table table-bordered">
+                  <table class="table table-bordered mb-3">
                     <thead class="table-dark">
                       <tr>
                         <th>Season</th>
@@ -494,14 +536,25 @@
                       </tr>
                     </tbody>
                   </table>
+          
+                  <!-- Buttons for Edit and Deactivate -->
+                  <div class="d-flex justify-content-end">
+                    <button class="btn btn-success btn-sm rounded-circle me-2" title="Edit Player Profile">
+                      <i class="bi bi-pencil"></i>
+                    </button>
+                    <button class="btn btn-danger btn-sm rounded-circle" title="Deactivate Player">
+                      <i class="bi bi-x"></i>
+                    </button>
+                  </div>
                 </div>
               </div>
             </div>
-          
+
             <div class="accordion-item">
               <h2 class="accordion-header">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseThree" aria-expanded="false" aria-controls="panelsStayOpen-collapseThree">
-                  <img src="assets/img/profile-img.jpg" alt="Profile" class="rounded-circle img-size img-fluid"> Erena Muhammed
+                <button class="accordion-button d-flex align-items-center collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseThree" aria-expanded="false" aria-controls="panelsStayOpen-collapseThree">
+                  <img src="assets/img/default image.avif" alt="Profile" class="rounded-circle img-size img-fluid me-2">
+                  Erena Muhammed
                 </button>
               </h2>
               <div id="panelsStayOpen-collapseThree" class="accordion-collapse collapse">
@@ -546,68 +599,44 @@
                       </tr>
                     </tbody>
                   </table>
+
+                  <div class="d-flex justify-content-end">
+                    <button class="btn btn-success btn-sm rounded-circle me-1" title="Edit Player Profile">
+                      <i class="bi bi-pencil"></i>
+                    </button>
+                    <button class="btn btn-danger btn-sm rounded-circle" title="Deactivate Player">
+                      <i class="bi bi-x"></i>
+                    </button>
+                  </div>
+
                 </div>
               </div>
             </div>
           </div>
-          
-          
-          <!-- Button to Add New Players -->
-          <div class="mt-4">
-            <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#addPlayerModal">
-              <i class="bi bi-plus-circle"></i> Add New Player
-            </button>
+
           </div>
           
-          <!-- Modal for Adding a New Player -->
-          <div class="modal fade" id="addPlayerModal" tabindex="-1" aria-labelledby="addPlayerModalLabel" aria-hidden="true">
-            <div class="modal-dialog">
-              <div class="modal-content">
-                <div class="modal-header">
-                  <h5 class="modal-title" id="addPlayerModalLabel">Add New Player</h5>
-                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                  <form id="addPlayerForm">
-                    <div class="mb-3">
-                      <label for="playerName" class="form-label">Player Name</label>
-                      <input type="text" class="form-control" id="playerName" placeholder="Enter player's name" required>
-                    </div>
-                    <div class="mb-3">
-                      <label for="playerDOB" class="form-label">Date of Birth</label>
-                      <input type="date" class="form-control" id="playerDOB" required>
-                    </div>
-                    <div class="mb-3">
-                      <label for="playerPosition" class="form-label">Position</label>
-                      <select class="form-select" id="playerPosition" required>
-                        <option value="" disabled selected>Select position</option>
-                        <option value="Forward">Forward</option>
-                        <option value="Midfielder">Midfielder</option>
-                        <option value="Defender">Defender</option>
-                        <option value="Goalkeeper">Goalkeeper</option>
-                      </select>
-                    </div>
-                    <div class="mb-3">
-                      <label for="playerJersey" class="form-label">Jersey Number</label>
-                      <input type="number" class="form-control" id="playerJersey" placeholder="Enter jersey number" required>
-                    </div>
-                    <div class="mb-3">
-                      <label for="playerNationality" class="form-label">State Of Origin</label>
-                      <input type="text" class="form-control" id="playerNationality" placeholder="Enter nationality" required>
-                    </div>
-                    <div class="mb-3">
-                      <label for="playerStats" class="form-label">Season Stats</label>
-                      <textarea class="form-control" id="playerStats" rows="3" placeholder="Enter stats (e.g., Season: 2024, Goals: 15, Assists: 10, Matches: 20)" required></textarea>
-                    </div>
-                    <button type="submit" class="btn btn-success w-100">Add Player</button>
-                  </form>
-                </div>
-              </div>
-            </div>
-          </div>
+          
           
 
+          <nav aria-label="..." class="col-2 m-auto">
+            <ul class="pagination mt-3">
+              <li class="page-item disabled">
+                <span class="page-link">Previous</span>
+              </li>
+              <li class="page-item active"><a class="page-link" href="#">1</a></li>
+              <li class="page-item" aria-current="page">
+                <span class="page-link">2</span>
+              </li>
+              <li class="page-item"><a class="page-link" href="#">3</a></li>
+              <li class="page-item">
+                <a class="page-link" href="#">Next</a>
+              </li>
+            </ul>
+          </nav>
+
         </div>
+
       </div>
     </section>
 
@@ -616,14 +645,14 @@
   <!-- ======= Footer ======= -->
   <footer id="footer" class="footer">
     <div class="copyright">
-      &copy; Copyright <strong><span>NiceAdmin</span></strong>. All Rights Reserved
+      &copy; Copyright <strong><span>Duza Lions</span></strong>. All Rights Reserved
     </div>
     <div class="credits">
       <!-- All the links in the footer should remain intact. -->
       <!-- You can delete the links only if you purchased the pro version. -->
       <!-- Licensing information: https://bootstrapmade.com/license/ -->
       <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/nice-admin-bootstrap-admin-html-template/ -->
-      Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+      Designed by <a href="https://bootstrapmade.com/">JaysEmpire</a>
     </div>
   </footer><!-- End Footer -->
 

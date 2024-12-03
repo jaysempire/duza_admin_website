@@ -1160,6 +1160,8 @@ h6 {
 
 .img-size{
   margin: 1%;
+  width: 60px;
+  height: 60px;
 }
 
 .contact .php-email-form button[type=submit]:hover {
