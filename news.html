@@ -269,7 +269,7 @@
     <ul class="sidebar-nav" id="sidebar-nav">
 
       <li class="nav-item">
-        <a class="nav-link " href="index.html">
+        <a class="nav-link collapsed" href="index.html">
           <i class="bi bi-grid"></i>
           <span>Dashboard</span>
         </a>
@@ -292,7 +292,7 @@
       </li><!-- End products Page Nav -->
 
       <li class="nav-item">
-        <a class="nav-link collapsed" href="news.html">
+        <a class="nav-link" href="news.html">
           <i class="bi bi-journal-text"></i>
           <span>News</span>
         </a>
@@ -325,9 +325,9 @@
     </div>
   
       <!-- News Cards -->
-      <div class="news-container row">
+      <div class="container row justify-content-center">
         <!-- Example News Card 1 -->
-        <div class="card col-4">
+        <div class="card col-md-5 col-lg-5 ">
           <img src="assets/img/news-1.jpg" class="card-img-top img-fluid" alt="News Image">
           <div class="card-body">
             <h5 class="card-title">Duza Lions 3-1 Sky Hawks</h5>
@@ -337,7 +337,7 @@
         </div>
   
         <!-- Example News Card 2 -->
-        <div class="card col-4 ">
+        <div class="card col-md-5 col-lg-5 ms-5">
           <img src="assets/img/news-3.jpg" class="card-img-top" alt="News Image">
           <div class="card-body">
             <h5 class="card-title">Disasterclass By Duza lions</h5>
@@ -346,7 +346,7 @@
           </div>
         </div>
 
-        <div class="card col-4 ">
+        <div class="card col-md-5 col-lg-5 ms-2 ">
           <img src="assets/img/news-4.jpg" class="card-img-top" alt="News Image">
           <div class="card-body">
             <h5 class="card-title">Star Player Injured</h5>
@@ -358,7 +358,7 @@
         
         <!-- Add more news cards here -->
       </div>
-    </div>
+    </div>  
   
     <!-- Modal to Add News -->
     <div class="modal fade" id="addNewsModal" tabindex="-1" aria-labelledby="addNewsModalLabel" aria-hidden="true">
@@ -372,25 +372,26 @@
             <form id="newsForm">
               <div class="mb-3">
                 <label for="newsTitle" class="form-label">News Title</label>
-                <input type="text" class="form-control" id="newsTitle" required>
+                <input type="text" class="form-control" id="newsTitle" placeholder="Enter news title" required>
               </div>
               <div class="mb-3">
                 <label for="newsDescription" class="form-label">News Description</label>
-                <textarea class="form-control" id="newsDescription" rows="3" required></textarea>
+                <textarea class="form-control" id="newsDescription" rows="3" placeholder="Write a short description..." required></textarea>
               </div>
               <div class="mb-3">
                 <label for="news_Image" class="form-label">News Image</label>
-                <input type="file" class="form-control" id="News_image">
-            </div>
+                <input type="file" class="form-control" id="news_Image">
+              </div>
               <div class="mb-3">
                 <label for="newsVenue" class="form-label">Venue</label>
-                <input type="text" class="form-control" id="newsVenue" required>
+                <input type="text" class="form-control" id="newsVenue" placeholder="Enter event location" required>
               </div>
               <div class="mb-3">
                 <label for="newsDate" class="form-label">Date</label>
                 <input type="date" class="form-control" id="newsDate" required>
               </div>
             </form>
+            
           </div>
           <div class="modal-footer">
             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
